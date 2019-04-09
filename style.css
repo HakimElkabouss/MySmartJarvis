@@ -1,9 +1,44 @@
+body{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.fenetre{
+    background: white;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px 30px 15px 30px;
+    height: auto;
+}
+.row{
+    display: flex;
+}
+#main_User{
+    float: left;
+    justify-content: flex-start;
+    margin-right: 80px;
+}
+#text{
+    float: left;
+    justify-content: center;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+}
+#envoyer_message{
+    margin-right: 40px;
+}
 #comment{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgb(105, 245, 233);
+    /* background-color: gray; */
     border-radius: 6px;
+    border-style: inset;
     margin-left: 20px;
     margin: 10px 10px 10px 10px;
 }
@@ -11,13 +46,13 @@
     text-align: center;
     color: rgb(119, 95, 255);
 }
-.Poster, .Agenda, .Listes{
+.Photos, .Agenda, .Listes{
     display:inline-block;
     margin-left: 20px;
 }
 .model-content{
-    position: absolute;
-    z-index: 20 00;
+    position: relative;
+    z-index: 4000;
     left: 0;
     top: 0;
     width: 100%;

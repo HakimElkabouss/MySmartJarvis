@@ -8,26 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="title">
-    <h1>My Smart Jarvis</h1>
-    </div>
+
     <div id="container">
+        <div class="panel panel-default fenetre">
+            <div class="row" style="padding:0;">
+                <div class="col-xs-2 col-md-1 text-center" id="main_User">
+                        <img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/01.png" alt="Jean-Denis" class="pastilleMoyen">
+                    </div>
+                    <input type="text" id="text" style="width:100%" name="Exprimez vous" placeholder="Exprimez vous...">
+                    <div class="col-xs-2 col-md-1 text-center" id="envoyer_message"  style="cursor:pointer;">
+                            <img src="https://cloud.mysmartjarvis.com/reseausocial/img/svg/envoyer.svg" onclick="send()" style="margin-top:0.8em" alt="envoyer" width="30">
+                        </div>
+            </div>
+        <select id="select">
+                        <option value="Jean-Denis">Jean-Denis</option>
+                        <option value="Pascale">Pascale</option>
+                        <option value="Elodie">Elodie</option>
+                        <option value="Michael">Michael</option>
+                </select> 
 
+                <!-- <textarea type="text" id="text" rows="4" cols="80" style="resize:none;" placeholder="Dites quelque chose ! ..."></textarea> -->
+
+                <button class="Photos" >Photos</button>
+                <button class="Agenda" >Agenda</button>
+                <button class="Listes" >Listes</button>
+            </div>
     </div>
     
     
-        <select id="select">
-                <option value="Jean-Denis">Jean-Denis</option>
-                <option value="Pascale">Pascale</option>
-                <option value="Elodie">Elodie</option>
-                <option value="Michael">Michael</option>
-        </select> 
-
-        <textarea type="text" id="text" rows="4" cols="80" style="resize:none;" placeholder="Dites quelque chose ! ..."></textarea>
-
-        <button class="Poster" onclick="send()">Poster</button>
-        <button class="Agenda" >Agenda</button>
-        <button class="Listes" >Listes</button>
+        
 
     
 

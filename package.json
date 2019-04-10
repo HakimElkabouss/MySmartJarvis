@@ -1,7 +1,6 @@
 {
   "name": "mysmartjarvis",
   "version": "1.0.0",
-  "description": "",
   "main": "back.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +12,15 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "sqlite3": "^4.0.6"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HakimElkabouss/MySmartJarvis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HakimElkabouss/MySmartJarvis/issues"
+  },
+  "homepage": "https://github.com/HakimElkabouss/MySmartJarvis#readme",
+  "description": ""
 }

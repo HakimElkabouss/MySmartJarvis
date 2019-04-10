@@ -1,10 +1,11 @@
 body{
-    background-color: gray;
+    background: url("https://cloud.mysmartjarvis.com/reseausocial/img/bg.jpg");
     position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+
 .fenetre{
     border-radius: 10px;
     font-size: 1em;
@@ -33,12 +34,12 @@ body{
     margin-right: 40px;
 }
 #comment{
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* background-color: gray; */
-    border-radius: 6px;
-    border-style: inset;
+    border: none;
+    border-radius: 8px;
     margin-left: 20px;
     margin: 10px 10px 10px 10px;
 }

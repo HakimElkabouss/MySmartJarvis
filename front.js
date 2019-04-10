@@ -9,15 +9,15 @@ $.get('http://localhost:8080/', function(response){
 
         const h2 = document.createElement('h2');
         const p = document.createElement('h4');
-        // const p1 = document.createElement('p');
+        const p1 = document.createElement('p');
 
         h2.innerHTML = "De "+po.post_name;
-        // p1.innerHTML = " à "+new Date().getHours()+"H"+new Date().getMinutes()+"min";
+        p1.innerHTML = " à "+new Date().getHours()+"H"+new Date().getMinutes()+"min";
         p.innerHTML = po.post_post;
         
         commentDiv.setAttribute('id', 'comment');
         commentDiv.appendChild(h2);
-        // commentDiv.appendChild(p1);
+        commentDiv.appendChild(p1);
         commentDiv.appendChild(p);
     
     })

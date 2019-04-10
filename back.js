@@ -26,7 +26,7 @@ db.serialize( () => {
         
         db.run('CREATE TABLE IF NOT EXISTS Agenda (agenda_id INTEGER PRIMARY KEY AUTOINCREMENT, date DATETIME, agenda_name TEXT UNIQUE, agenda_user TEXT, agenda_lieu TEXT)');
 
-        db.run('CREATE TABLE IF NOT EXISTS Listes (liste_id INTEGER PRIMARY KEY AUTOINCREMENT, liste_name TEXT, liste_desc TEXT, liste_user TEXT)');
+        db.run('CREATE TABLE IF NOT EXISTS Listes (liste_id INTEGER PRIMARY KEY AUTOINCREMENT, liste_name TEXT, liste_desc1 TEXT, liste_desc2 TEXT, liste_desc3 TEXT, liste_desc4 TEXT, liste_desc5 TEXT, liste_desc6 TEXT, liste_user TEXT)');
 
 })
 
@@ -65,9 +65,14 @@ app.get('/listes', function(request,response){
 });
 
 app.post('/listes', function(request, response){
-    db.run('INSERT INTO Listes (liste_name, liste_desc, liste_user) VALUES (?, ?, ?)',request.body.liste_name, request.body.liste_desc, request.body.liste_user, function(error, data){
+    db.run('INSERT INTO Listes (liste_name, liste_desc1, liste_desc2, liste_desc3, liste_desc4, liste_desc5, liste_desc6, liste_user) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',request.body.liste_name, request.body.liste_desc1, request.body.liste_desc2, request.body.liste_desc3, request.body.liste_desc4, request.body.liste_desc5, request.body.liste_desc6, request.body.liste_user, function(error, data){
         console.log(request.body.liste_name);
-        console.log(request.body.liste_desc);
+        console.log(request.body.liste_desc1);
+        console.log(request.body.liste_desc2);
+        console.log(request.body.liste_desc3);
+        console.log(request.body.liste_desc4);
+        console.log(request.body.liste_desc5);
+        console.log(request.body.liste_desc6);
         console.log(request.body.liste_user);
     })
 })

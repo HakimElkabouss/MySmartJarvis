@@ -54,18 +54,33 @@ $.get('http://localhost:8080/listes', function(response){
 
         const h1 = document.createElement('h1');
         const h2 = document.createElement('h2');
-        const h3 = document.createElement('h3');
+        const desc1 = document.createElement('h3');
+        const desc2 = document.createElement('h3');
+        const desc3 = document.createElement('h3');
+        const desc4 = document.createElement('h3');
+        const desc5 = document.createElement('h3');
+        const desc6 = document.createElement('h3');
 
         
-        h2.innerHTML = "<img src='https://cloud.mysmartjarvis.com/reseausocial/img/Modal1/liste.png' width='30' />"+li.liste_name;
+        h2.innerHTML = "<img src='https://cloud.mysmartjarvis.com/reseausocial/img/Modal1/liste.png' width='30' />"+" "+li.liste_name;
         h1.innerHTML = "Par "+li.liste_user;
-        h3.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc;
+        desc1.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc1;
+        desc2.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc2;
+        desc3.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc3;
+        desc4.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc4;
+        desc5.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc5;
+        desc6.innerHTML = "<img src='images/unchecked.svg' width='25' id='unchecked' />"+" "+li.liste_desc6;
 
-        h3.setAttribute('id','descList');
-        listDiv.setAttribute('id', 'liste');
+        desc1.setAttribute('id','descList');
+        listDiv.setAttribute('id', 'panel panel-default fenetre');
         listDiv.appendChild(h2);
         listDiv.appendChild(h1);
-        listDiv.appendChild(h3);
+        listDiv.appendChild(desc1);
+        listDiv.appendChild(desc2);
+        listDiv.appendChild(desc3);
+        listDiv.appendChild(desc4);
+        listDiv.appendChild(desc5);
+        listDiv.appendChild(desc6);
         })
 })
 
@@ -96,9 +111,14 @@ function sendAg(){
 function sendLi(){
     var name = document.querySelector('#listName').value;
     var user = document.querySelector('#selectUser').value;
-    var desc = document.querySelector('#newTask').value;
+    var desc1 = document.querySelector('#newTask').value;
+    var desc2 = document.querySelector('#newTask1').value;
+    var desc3 = document.querySelector('#newTask2').value;
+    var desc4 = document.querySelector('#newTask3').value;
+    var desc5 = document.querySelector('#newTask4').value;
+    var desc6 = document.querySelector('#newTask5').value;
 
-    $.post('http://localhost:8080/listes', {liste_user : user, liste_name : name, liste_desc : desc}, function(response){
+    $.post('http://localhost:8080/listes', {liste_user : user, liste_name : name, liste_desc1 : desc1, liste_desc2 : desc2, liste_desc3 : desc3, liste_desc4 : desc4, liste_desc5 : desc5, liste_desc6 : desc6}, function(response){
         console.log(response);
     })
 }
@@ -135,4 +155,34 @@ $(document).ready(function(){
             $('#add-element').css('display','block');
         }
     })
+
+    $('#ajouterCase').click(function(){
+        $('#newTask1').css('display','block');
+        $('#ajouterCase').css('display','none');
+        $('#ajouterCase1').css('display','block');
+    })
+
+    $('#ajouterCase1').click(function(){
+        $('#newTask2').css('display','block');
+        $('#ajouterCase1').css('display','none');
+        $('#ajouterCase2').css('display','block');
+    })
+
+    $('#ajouterCase2').click(function(){
+        $('#newTask3').css('display','block');
+        $('#ajouterCase2').css('display','none');
+        $('#ajouterCase3').css('display','block');
+    })
+
+    $('#ajouterCase3').click(function(){
+        $('#newTask4').css('display','block');
+        $('#ajouterCase3').css('display','none');
+        $('#ajouterCase4').css('display','block');
+    })
+
+    $('#ajouterCase4').click(function(){
+        $('#newTask5').css('display','block');
+        $('#ajouterCase4').css('display','none');
+    })
+
 })

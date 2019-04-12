@@ -22,11 +22,11 @@ db.serialize( () => {
         db.run('INSERT INTO Users (user_name, user_img) VALUES (?, ?)',"Micheal","https://cloud.mysmartjarvis.com/reseausocial/img/avatar/05.png");
 
 
-        db.run('CREATE TABLE IF NOT EXISTS Posts (post_id INTEGER PRIMARY KEY AUTOINCREMENT, post_name TEXT, post_post TEXT)');
+        db.run('CREATE TABLE IF NOT EXISTS Posts (post_id INTEGER PRIMARY KEY AUTOINCREMENT, post_name TEXT, post_post TEXT, post_time DATETIME, post_avatar TEXT)');
         
         db.run('CREATE TABLE IF NOT EXISTS Agenda (agenda_id INTEGER PRIMARY KEY AUTOINCREMENT, date DATETIME, agenda_name TEXT UNIQUE, agenda_user TEXT, agenda_lieu TEXT)');
 
-        db.run('CREATE TABLE IF NOT EXISTS Listes (liste_id INTEGER PRIMARY KEY AUTOINCREMENT, liste_name TEXT, liste_desc1 TEXT, liste_desc2 TEXT, liste_desc3 TEXT, liste_desc4 TEXT, liste_desc5 TEXT, liste_desc6 TEXT, liste_user TEXT)');
+        db.run('CREATE TABLE IF NOT EXISTS Listes (liste_id INTEGER PRIMARY KEY AUTOINCREMENT, liste_name TEXT, liste_desc1 TEXT, liste_desc2 TEXT, liste_desc3 TEXT, liste_desc4 TEXT, liste_desc5 TEXT, liste_desc6 TEXT, liste_user TEXT, liste_time DATETIME, liste_avatar TEXT)');
 
 })
 
@@ -37,9 +37,11 @@ app.get('/', function(request, response){
 });
 
 app.post('/', function(request,response){
-    db.run('INSERT INTO Posts (post_name, post_post) VALUES (?, ?)', request.body.post_name, request.body.post_post, function(error, data){
+    db.run('INSERT INTO Posts (post_name, post_post, post_time, post_avatar) VALUES (?, ?, ?, ?)', request.body.post_name, request.body.post_post, request.body.post_time, request.body.post_avatar, function(error, data){
         console.log(request.body.post_name);
         console.log(request.body.post_post);
+        console.log(request.body.post_time);
+        console.log(request.body.post_avatar);
     });
 });
 
@@ -65,7 +67,7 @@ app.get('/listes', function(request,response){
 });
 
 app.post('/listes', function(request, response){
-    db.run('INSERT INTO Listes (liste_name, liste_desc1, liste_desc2, liste_desc3, liste_desc4, liste_desc5, liste_desc6, liste_user) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',request.body.liste_name, request.body.liste_desc1, request.body.liste_desc2, request.body.liste_desc3, request.body.liste_desc4, request.body.liste_desc5, request.body.liste_desc6, request.body.liste_user, function(error, data){
+    db.run('INSERT INTO Listes (liste_name, liste_desc1, liste_desc2, liste_desc3, liste_desc4, liste_desc5, liste_desc6, liste_user, liste_time, liste_avatar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',request.body.liste_name, request.body.liste_desc1, request.body.liste_desc2, request.body.liste_desc3, request.body.liste_desc4, request.body.liste_desc5, request.body.liste_desc6, request.body.liste_user, request.body.liste_time, request.body.liste_avatar, function(error, data){
         console.log(request.body.liste_name);
         console.log(request.body.liste_desc1);
         console.log(request.body.liste_desc2);
@@ -74,6 +76,8 @@ app.post('/listes', function(request, response){
         console.log(request.body.liste_desc5);
         console.log(request.body.liste_desc6);
         console.log(request.body.liste_user);
+        console.log(request.body.liste_time);
+        console.log(request.body.liste_avatar);
     })
 })
 

@@ -2,6 +2,7 @@ const sqlite3 = require('sqlite3');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const MongoClient = require("mongodb").MongoClient;
 
 const dbFile = 'post.db';
 
@@ -80,6 +81,12 @@ app.post('/listes', function(request, response){
         console.log(request.body.liste_avatar);
     })
 })
+
+// MongoClient.connect("mongodb://localhost/MySmartJarvis", function(error, db) {
+//     if (error) return funcCallback(error);
+
+//     console.log("Connecté à la base de données 'MySmartJarvis'");
+// });
 
 app.listen(8080, function(error){
     if(!error) console.log("everything works");

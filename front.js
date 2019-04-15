@@ -120,10 +120,18 @@ function send(){
     }
 
     
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.open("POST", "post.db", true);
-    // xhttp.send();
-    // document.getElementById("results").innerHTML = xhttp.responseText;
+//     var xhttp = new XMLHttpRequest();
+
+//     xhttp.onreadystatechange = function(){
+//         console.log(this);
+//         if(this.readyState == 4 && this.status == 200){
+//         container.innerHTML = xhttp.responseText;
+//     } 
+// }
+//     xhttp.open("GET", "http://localhost:8080/");
+//     xhttp.responseType = "text";
+//     xhttp.send();
+    
     
     
     console.log(name);
@@ -186,6 +194,10 @@ function sendLi(){
 
 
 $(document).ready(function(){
+
+    $('#envoyer').click(function(){
+            $("input:text").val('');
+        });
     
     $('.Agenda').click(function(){
         $('#modal1').css('display', 'block');
@@ -249,6 +261,32 @@ $(document).ready(function(){
         $('#selectUser5').css('display','block');
     })
 
+    $('#Jean').click(function(){
+        $('.pastilleMoyen').replaceWith('<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/01.png" alt="Jean-Denis" class="pastilleMoyen">');
+    })
+
+    $('#Pascale').click(function(){
+        $('.pastilleMoyen').replaceWith('<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/04.png" alt="Pascale" class="pastilleMoyen"></img>');
+    })
+
+    $('#Elodie').click(function(){
+        $('.pastilleMoyen').replaceWith('<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/08.png" alt="Elodie" class="pastilleMoyen"></img>');
+    })
+
+    $('#Michael').click(function(){
+        $('.pastilleMoyen').replaceWith('<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/05.png" alt="Michael" class="pastilleMoyen"></img>');
+    })
+
    
 
 })
+
+// const name = document.querySelector('#select').value;
+
+// if(name == 'Pascale'){
+//     document.getElementById('main_User').innerHTML = '<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/04.png" alt="Pascale" class="pastilleMoyen"></img>';
+// }else if(name == 'Elodie'){
+//     document.getElementById('main_User').innerHTML = '<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/08.png" alt="Elodie" class="pastilleMoyen"></img>';
+// }else if(name == 'Michael'){
+//     document.getElementById('main_User').innerHTML = '<img src="https://cloud.mysmartjarvis.com/reseausocial/img/avatar/05.png" alt="Michael" class="pastilleMoyen"></img>';
+// }else{console.log('ok');}

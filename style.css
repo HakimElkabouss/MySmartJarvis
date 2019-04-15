@@ -43,6 +43,9 @@ body{
     margin-left: 20px;
     margin: 10px 10px 10px 10px;
 }
+#comment h2,img,p{
+    display: inline-block;
+}
 #title h1{
     text-align: center;
     color: rgb(119, 95, 255);
@@ -69,9 +72,15 @@ button,#select{
     flex-direction: row;
 }
 #comment h2{
+    display: flex;
     justify-content: flex-start;
 }
+#comment img{
+    display: flex;
+    justify-content: center;
+}
 #comment p {
+    display: flex;
     justify-content: flex-end;
 }
 #comment h4{

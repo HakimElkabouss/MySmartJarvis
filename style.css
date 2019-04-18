@@ -5,7 +5,13 @@ body{
     left: 50%; 
     transform: translate(-50%, -50%); */
 }
-
+#commentaire{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin: 10px 10px 10px 10px;
+}
 .fenetre{
     border-radius: 10px;
     font-size: 1em;
@@ -21,6 +27,24 @@ body{
     justify-content: flex-start;
     margin-right: 80px;
 }
+#descList1 #avatar{
+    margin-left: 50px;
+}
+#descList2 #avatar{
+    margin-left: 50px;
+}
+#descList3 #avatar{
+    margin-left: 50px;
+}
+#descList4 #avatar{
+    margin-left: 50px;
+}
+#descList5 #avatar{
+    margin-left: 50px;
+}
+#descList6 #avatar{
+    margin-left: 50px;
+}
 #text{
     float: left;
     justify-content: center;
@@ -28,14 +52,18 @@ body{
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    border: none;
+    
 }
 #envoyer_message{
     margin-right: 40px;
 }
+#List{
+    display: flex;
+    margin-bottom: 9px;
+}
 #comment{
     background-color: aliceblue;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: flex-end;
     border: none;
@@ -104,4 +132,11 @@ button,#select{
     border-radius: 8px;
     margin-left: 20px;
     margin: 10px 10px 10px 10px;
+}
+#text1, #envoyer1{
+    display: inline-block;
+}
+hr{
+    color: black;
+    width: 200px; 
 }

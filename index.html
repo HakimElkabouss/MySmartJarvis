@@ -72,35 +72,92 @@
             <input type="text" class="col-xs-12" style="padding-left: 20px" id="listName" placeholder="Nom de la liste">
             <button type="button" class="btn btn-block" id="createList"> Créer cette liste</button>
         <div id="add-element" style="display:none;">
+            <div id="List">
             <input type="text" class="col-xs-12 col-md-5" id="newTask" placeholder="Que devez-vous faire?" >
-            <button type="button" class="btn btn-primary" id="ajouterCase">+</button>
-            <input type="text" class="col-xs-12 col-md-5" id="newTask1" placeholder="Que devez-vous faire?" style="display:none;" >
-            <button type="button" class="btn btn-primary" id="ajouterCase1" style="display:none;">+</button>
-            <input type="text" class="col-xs-12 col-md-5" id="newTask2" placeholder="Que devez-vous faire?" style="display:none;" >
-            <button type="button" class="btn btn-primary" id="ajouterCase2" style="display:none;">+</button>
-            <input type="text" class="col-xs-12 col-md-5" id="newTask3" placeholder="Que devez-vous faire?" style="display:none;" >
-            <button type="button" class="btn btn-primary" id="ajouterCase3" style="display:none;">+</button>
-            <input type="text" class="col-xs-12 col-md-5" id="newTask4" placeholder="Que devez-vous faire?" style="display:none;" >
-            <button type="button" class="btn btn-primary" id="ajouterCase4" style="display:none;">+</button>
-            <input type="text" class="col-xs-12 col-md-5" id="newTask5" placeholder="Que devez-vous faire?" style="display:none;" >
-            
             <select id="selectUser" class="col-xs-12 col-md-3 text-center">
-                <option value="Tous">Tous</option>
+                <!-- <option value="Tous">Tous</option> -->
                 <option value="Jean-Denis">Jean-Denis</option>
                 <option value="Pascale">Pascale</option>
                 <option value="Elodie">Elodie</option>
                 <option value="Michael">Michael</option>
             </select>
+            <button type="button" class="btn btn-primary" id="ajouterCase">+</button>
+            </div><br>
+            
+
+            <div id="List">
+            <input type="text" class="col-xs-12 col-md-5" id="newTask1" placeholder="Que devez-vous faire?" style="display:none;" >
+            <select id="selectUser1" class="col-xs-12 col-md-3 text-center" style="display:none;">
+                <!-- <option value="Tous">Tous</option> -->
+                <option value="Jean-Denis">Jean-Denis</option>
+                <option value="Pascale">Pascale</option>
+                <option value="Elodie">Elodie</option>
+                <option value="Michael">Michael</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="ajouterCase1" style="display:none;">+</button>
+            </div>
+
+
+            <div id="List">
+            <input type="text" class="col-xs-12 col-md-5" id="newTask2" placeholder="Que devez-vous faire?" style="display:none;" >
+            <select id="selectUser2" class="col-xs-12 col-md-3 text-center" style="display:none;">
+                <!-- <option value="Tous">Tous</option> -->
+                <option value="Jean-Denis">Jean-Denis</option>
+                <option value="Pascale">Pascale</option>
+                <option value="Elodie">Elodie</option>
+                <option value="Michael">Michael</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="ajouterCase2" style="display:none;">+</button>
+            </div>
+
+            <div id="List">
+            <input type="text" class="col-xs-12 col-md-5" id="newTask3" placeholder="Que devez-vous faire?" style="display:none;" >
+            <select id="selectUser3" class="col-xs-12 col-md-3 text-center" style="display:none;">
+                <!-- <option value="Tous">Tous</option> -->
+                <option value="Jean-Denis">Jean-Denis</option>
+                <option value="Pascale">Pascale</option>
+                <option value="Elodie">Elodie</option>
+                <option value="Michael">Michael</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="ajouterCase3" style="display:none;">+</button>
+            </div>
+
+            <div id="List">
+            <input type="text" class="col-xs-12 col-md-5" id="newTask4" placeholder="Que devez-vous faire?" style="display:none;" >
+            <select id="selectUser4" class="col-xs-12 col-md-3 text-center" style="display:none;">
+                <!-- <option value="Tous">Tous</option> -->
+                <option value="Jean-Denis">Jean-Denis</option>
+                <option value="Pascale">Pascale</option>
+                <option value="Elodie">Elodie</option>
+                <option value="Michael">Michael</option>
+            </select>
+            <button type="button" class="btn btn-primary" id="ajouterCase4" style="display:none;">+</button>
+            </div>
+
+
+            <div id="List">
+            <input type="text" class="col-xs-12 col-md-5" id="newTask5" placeholder="Que devez-vous faire?" style="display:none;" >
+            <select id="selectUser5" class="col-xs-12 col-md-3 text-center" style="display:none;">
+                <!-- <option value="Tous">Tous</option> -->
+                <option value="Jean-Denis">Jean-Denis</option>
+                <option value="Pascale">Pascale</option>
+                <option value="Elodie">Elodie</option>
+                <option value="Michael">Michael</option>
+            </select>
+            </div>
+            
+            
             <button type="button" class="btn btn-block" id="validList" onclick="sendLi()" >Ajouter</button>
             <button type="button" class="btn btn-block" id="terminer" >Terminer</button>
         </div>
             <hr>
         </div>
     </div>
-
+    
     <div id="results">
-        
+       
     </div>
+     
     <div id="agenda_resultas">
 
     </div>
